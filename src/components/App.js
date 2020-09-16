@@ -41,9 +41,11 @@ function App() {
           isLoggedIn={isLoggedIn}
         />
       ) : (
-        "Initializing"
+        ""
       )}
-      <footer>&copy; Not Twitter {new Date().getFullYear()}</footer>
+      {/* <footer style={{ textAlign: "center" }}>
+        &copy; Not Twitter {new Date().getFullYear()}
+      </footer> */}
     </>
   );
 }

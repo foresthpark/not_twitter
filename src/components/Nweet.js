@@ -2,10 +2,13 @@ import { firebaseStorage, firestoreDb } from "firebaseConfig";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { Popover } from "antd";
+import "antd/dist/antd.css";
 
 const Nweet = ({ nweetObject, isOwner }) => {
   const [newNweet, setNewNweet] = useState(nweetObject.text);
   const [isEditing, setIsEditing] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const toggleIsEditing = () => setIsEditing((prev) => !prev);
 
@@ -59,7 +62,18 @@ const Nweet = ({ nweetObject, isOwner }) => {
       ) : (
         <>
           <h4>{nweetObject.text}</h4>
-          {nweetObject.imgUrl && <img src={nweetObject.imgUrl} alt="" />}
+          {nweetObject.imgUrl && (
+            <>
+              <Popover content={<img src={nweetObject.imgUrl} alt="" />}>
+                <img
+                  // className="backdrop"
+                  onClick={() => setSelectedImage(nweetObject.imgUrl)}
+                  src={nweetObject.imgUrl}
+                  alt=""
+                />
+              </Popover>
+            </>
+          )}
           {isOwner && (
             <div class="nweet__actions">
               <span onClick={handleDeleteClick}>
