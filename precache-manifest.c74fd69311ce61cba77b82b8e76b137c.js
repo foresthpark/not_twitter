@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b332f99e9278cc6a30c54bd1b10e6911",
+    "revision": "2a7cef16b401c8677baad226ae1e3de6",
     "url": "/not_twitter/index.html"
   },
   {
-    "revision": "98bdb90fc5d34fae4944",
+    "revision": "17ee658c36b7b0531da0",
     "url": "/not_twitter/static/css/main.ef091cd1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/not_twitter/static/js/2.3e79d280.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "98bdb90fc5d34fae4944",
-    "url": "/not_twitter/static/js/main.b7c57d00.chunk.js"
+    "revision": "17ee658c36b7b0531da0",
+    "url": "/not_twitter/static/js/main.3105e425.chunk.js"
   },
   {
     "revision": "6b1f60c3ceb2c94f78ba",
