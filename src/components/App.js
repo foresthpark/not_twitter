@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AppRouter from "components/AppRouter";
 import { authService } from "firebaseConfig";
+import { NextSeo } from "next-seo";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -34,6 +35,10 @@ function App() {
 
   return (
     <>
+      <NextSeo
+        title="Not Another Twitter Clone"
+        description="A gurantee you that this isn't a twitter clone"
+      />
       {init ? (
         <AppRouter
           refreshUser={refreshUser}

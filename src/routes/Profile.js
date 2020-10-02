@@ -12,7 +12,6 @@ const Profile = ({ userObject, refreshUser }) => {
   const onLogOutClick = () => {
     authService.signOut();
     history.push("/");
-    refreshUser();
   };
 
   const getMyNweets = async () => {
@@ -33,9 +32,8 @@ const Profile = ({ userObject, refreshUser }) => {
     event.preventDefault();
     if (userObject.displayName !== newDisplayName) {
       await userObject.updateProfile({ displayName: newDisplayName });
+      refreshUser();
     }
-
-    refreshUser();
   };
 
   const onDisplayNameChange = (event) => {
